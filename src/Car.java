@@ -1,13 +1,9 @@
-public class Car {
-
-    public String modelName;
-    public int wheelsCount;
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+public class Car extends EngineOperation implements ServiceTransport  {
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
     }
-
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+    public void service() {
+        super.service();
+        checkEngine();
     }
 }
